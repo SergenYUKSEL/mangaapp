@@ -1,0 +1,104 @@
+---
+description: follow instructions
+globs: 
+alwaysApply: false
+---
+
+# 📖 MangaApp - Application de gestion de mangas
+
+## 📌 Description
+MangaApp est une application web permettant de récupérer des mangas depuis l'API **MangaDex**, affichant leur **titre, ISBN, couverture, résumé et note**. Les utilisateurs peuvent créer un compte, gérer leur bibliothèque de mangas et suivre leurs lectures.
+
+## 🚀 Technologies utilisées
+
+### **Frontend :**
+- **Next.js** (React + Server-side rendering)
+- **TypeScript**
+- **Tailwind CSS** (styling)
+- **ShadCN UI** (UI components)
+- **React Query** (gestion des requêtes API)
+- **Zustand** (gestion d'état)
+- **NextAuth.js** (authentification)
+
+### **Backend :**
+- **Node.js + Express.js**
+- **TypeScript**
+- **MongoDB + Mongoose**
+- **Zod** (validation des données)
+- **JWT** (authentification sécurisée)
+- **Swagger** (documentation API)
+- **Jest + Supertest** (tests backend)
+- **Rate limiting** (protection contre les abus d’API)
+
+## 📄 Fonctionnalités
+
+### **1️⃣ Frontend (Interface Utilisateur)**
+✅ **Accueil (`/`)**  
+- Header avec appels à actions  
+- Section "Découverte" affichant les dernières sorties  
+- Footer  
+
+✅ **Catalogue (`/catalogue`)**  
+- Classement des mangas par genre (**Seinen, Shojo, etc.**)  
+- Affichage des mangas avec filtres  
+
+✅ **Fiche Manga (`/manga/[id]`)**  
+- Affichage des infos détaillées d’un manga  
+- Section "Du même auteur"  
+
+✅ **Recherche (Popup)**  
+- Recherche par **nom, genre, auteur**  
+- Accès rapide à la fiche d’un manga  
+- Ajout du manga à la bibliothèque  
+- Option **lu/non lu**  
+
+✅ **Bibliothèque (`/bibliotheque`)**  
+- Statistiques des mangas ajoutés  
+- Sections :  
+  - "Mangas que je possède"  
+  - "Mangas que je veux"  
+- Marquer un manga comme **lu/non lu**  
+
+✅ **Authentification (`/auth`)**  
+- Portail de connexion / création de compte  
+- Gestion sécurisée avec **JWT + NextAuth.js**  
+
+---
+
+### **2️⃣ Backend (API Express + MongoDB)**
+✅ **Authentification**  
+- Inscription / Connexion (**JWT + NextAuth**)  
+- Sécurisation des routes privées  
+
+✅ **Gestion des mangas**  
+- Récupération des mangas via **MangaDex API**  
+- Stockage local des mangas en **MongoDB** (si besoin)  
+
+✅ **Bibliothèque utilisateur**  
+- Ajout / Suppression de mangas  
+- Gestion des statuts **Possédé / Voulu / Lu / Non lu**  
+
+✅ **Recherche avancée**  
+- Recherche par titre / auteur / genre  
+- Filtrage intelligent  
+
+✅ **Documentation API**  
+- Documentation avec **Swagger**  
+
+## 🔥 Déploiement & CI/CD
+- **Frontend** : déployé sur **Vercel**
+- **Backend** : déployé sur **Railway/Render**
+- **Docker** pour le développement et la production
+- **GitHub Actions** pour les tests automatisés
+
+---
+
+## ✅ Prochaine étape
+1️⃣ **Initialiser le projet Next.js avec TypeScript, Tailwind et ShadCN UI**  
+2️⃣ **Créer le backend avec Express et MongoDB**  
+3️⃣ **Se connecter à l'API MangaDex et afficher les données**  
+
+---
+
+📢 **Auteur :** Sergen  
+📅 **Date de création :** Mars 2025
